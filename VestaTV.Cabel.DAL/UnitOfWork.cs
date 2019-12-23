@@ -23,7 +23,7 @@ namespace VestaTV.Cabel.DAL
         private IGenericRepository<Subscriber> _subscribers;
         private IGenericRepository<SubscriberRelationship> _subscriberrelationships;
         private IGenericRepository<User> _user;
-        private IGenericRepository<UserAction> _userActionHistory;
+        private IGenericRepository<UserHistory> _userActionHistory;
 
         public IGenericRepository<Master> Masters
         {
@@ -73,9 +73,9 @@ namespace VestaTV.Cabel.DAL
             get => _user ?? (_user = new GenericRepository<User>(_db, _db.Users));
         }
 
-        public IGenericRepository<UserAction> UserActionHistory
+        public IGenericRepository<UserHistory> UserActionHistory
         {
-            get => _userActionHistory ?? (_userActionHistory = new GenericRepository<UserAction>(_db, _db.UserActions));
+            get => _userActionHistory ?? (_userActionHistory = new GenericRepository<UserHistory>(_db, _db.UserActions));
         }
 
         public void Save()

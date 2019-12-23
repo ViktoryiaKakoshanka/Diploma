@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace VestaTV.Cabel.DAL.Entities
 {

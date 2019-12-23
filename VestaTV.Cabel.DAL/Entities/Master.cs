@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace VestaTV.Cabel.DAL.Entities
 {
@@ -7,7 +6,7 @@ namespace VestaTV.Cabel.DAL.Entities
     {
         public Master()
         {
-            MasterCities = new HashSet<MasterCities>();
+            Cities = new HashSet<MasterCities>();
             OrderOnCableTvs = new HashSet<OrderOnCableTV>();
             OrderRepairAndRestructionsMasterPerformer = new HashSet<OrderRepairAndRestruction>();
             OrderRepairAndRestructionsResponsibleMaster = new HashSet<OrderRepairAndRestruction>();
@@ -25,7 +24,7 @@ namespace VestaTV.Cabel.DAL.Entities
         public string SecondMobilePhone { get; set; }
         public bool Brigade { get; set; }
 
-        public virtual ICollection<MasterCities> MasterCities { get; set; }
+        public virtual ICollection<MasterCities> Cities { get; set; }
         public virtual ICollection<OrderOnCableTV> OrderOnCableTvs { get; set; }
         public virtual ICollection<OrderRepairAndRestruction> OrderRepairAndRestructionsMasterPerformer { get; set; }
         public virtual ICollection<OrderRepairAndRestruction> OrderRepairAndRestructionsResponsibleMaster { get; set; }

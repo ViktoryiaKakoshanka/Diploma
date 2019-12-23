@@ -17,7 +17,7 @@ namespace VestaTV.Cabel.DAL.Interfaces
         IGenericRepository<SubscriberRelationship> SubscriberRelationships { get; }
 
         IGenericRepository<User> Users { get; }
-        IGenericRepository<UserAction> UserActionHistory { get; }
+        IGenericRepository<UserHistory> UserActionHistory { get; }
 
         void Save();
     }

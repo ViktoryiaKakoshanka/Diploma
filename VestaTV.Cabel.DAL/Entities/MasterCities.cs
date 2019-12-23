@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace VestaTV.Cabel.DAL.Entities
+﻿namespace VestaTV.Cabel.DAL.Entities
 {
     public partial class MasterCities
     {

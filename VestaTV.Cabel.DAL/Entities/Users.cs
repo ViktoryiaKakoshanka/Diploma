@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace VestaTV.Cabel.DAL.Entities
 {
@@ -8,7 +7,7 @@ namespace VestaTV.Cabel.DAL.Entities
         public User()
         {
             OrderRepairAndRestructions = new HashSet<OrderRepairAndRestruction>();
-            UserActions = new HashSet<UserAction>();
+            UserHistory = new HashSet<UserHistory>();
         }
 
         public int Id { get; set; }
@@ -18,6 +17,6 @@ namespace VestaTV.Cabel.DAL.Entities
         public byte AdminRole { get; set; }
 
         public virtual ICollection<OrderRepairAndRestruction> OrderRepairAndRestructions { get; set; }
-        public virtual ICollection<UserAction> UserActions { get; set; }
+        public virtual ICollection<UserHistory> UserHistory { get; set; }
     }
 }
