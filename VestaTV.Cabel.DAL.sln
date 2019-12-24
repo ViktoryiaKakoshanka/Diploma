@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VestaTV.Cabel.DAL", "VestaTV.Cabel.DAL\VestaTV.Cabel.DAL.csproj", "{CB2FC0B2-A4F5-441D-A0C9-87CDD9023872}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VestaTV.Cabel.DAL", "VestaTV.Cabel.DAL\VestaTV.Cabel.DAL.csproj", "{CB2FC0B2-A4F5-441D-A0C9-87CDD9023872}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VestaTV.Cabel.API", "VestaTV.Cabel.API\VestaTV.Cabel.API.csproj", "{8848CD6E-49A0-4C00-A50C-DB96782A7278}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VestaTV.Cabel.API", "VestaTV.Cabel.API\VestaTV.Cabel.API.csproj", "{8848CD6E-49A0-4C00-A50C-DB96782A7278}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9894D1A-611B-48F1-AAAE-9B16D6930CB9}"
+	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
