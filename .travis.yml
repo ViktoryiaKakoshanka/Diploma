@@ -1,10 +1,10 @@
 language: csharp
-solution: VestaTV.Cabel.DAL.sln 
-dist: trusty  
 mono: none
 dotnet: 2.1.4
 sudo: false
-before_script:
-  - dotnet restore
+env:
+    global:
+        - DOTNET_CLI_TELEMETRY_OPTOUT: 1
 script:
-  - dotnet build VestaTV.Cabel.DAL.sln -c Release
+    - dotnet build VestaTV.Cabel.DAL.sln -c Release
+    - dotnet test -c Release --no-build VestaTV.Cabel.DAL.Test/VestaTV.Cabel.DAL.Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
