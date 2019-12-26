@@ -1,2 +1,3 @@
 language: csharp
 solution: VestaTV.Cabel.DAL.sln
+os : windows
