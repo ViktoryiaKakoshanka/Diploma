@@ -1,6 +1,5 @@
 language: csharp
 solution: VestaTV.Cabel.DAL.sln
-os : windows
 sudo: required  
 dist: trusty  
 mono: none
