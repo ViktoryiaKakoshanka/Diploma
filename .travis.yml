@@ -9,5 +9,4 @@ script:
     - dotnet build VestaTV.Cabel.DAL.sln -c Release
     - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./NUnitTestProject1/bin/Release/NUnitTestProject1.dll
 install:
-  - nuget restore VestaTV.Cabel.DAL.sln
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
