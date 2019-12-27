@@ -1,6 +1,8 @@
 language: csharp
 mono: none
-dotnet: .NET Standard 2.0
+dotnet: 
+ - netstandard2.1
+ - netcoreapp3.0
 sudo: false
 env:
     global:
