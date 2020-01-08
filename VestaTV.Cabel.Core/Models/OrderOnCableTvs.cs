@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace VestaTV.Cabel.DAL.Entities
+namespace VestaTV.Cabel.Core.Models
 {
-    public partial class OrderOnCableTV
+    public partial class HistoryOfOrder
     {
         public int Id { get; set; }
         public int SubscriberId { get; set; }

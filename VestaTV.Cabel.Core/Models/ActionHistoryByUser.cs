@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace VestaTV.Cabel.DAL.Entities
+namespace VestaTV.Cabel.Core.Models
 {
-    public partial class UserHistory
+    public partial class ActionHistoryByUser
     {
         public int Id { get; set; }
         public DateTime DateOfAction { get; set; }

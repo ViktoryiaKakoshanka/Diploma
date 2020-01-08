@@ -2,7 +2,7 @@
 
 namespace VestaTV.Cabel.DAL.Entities
 {
-    public partial class OrderRepairAndRestruction
+    internal partial class OrderRepairAndRestructionEntity
     {
         public int Id { get; set; }
         public int UserId { get; set; }
@@ -20,10 +20,10 @@ namespace VestaTV.Cabel.DAL.Entities
         public DateTime DateOfCreation { get; set; }
         public DateTime EstimatedCompletionDate { get; set; }
 
-        public virtual City City { get; set; }
-        public virtual Master MasterPerformer { get; set; }
-        public virtual Master ResponsibleMaster { get; set; }
-        public virtual Street Street { get; set; }
-        public virtual User User { get; set; }
+        public virtual CityEntity City { get; set; }
+        public virtual MasterEntity MasterPerformer { get; set; }
+        public virtual MasterEntity ResponsibleMaster { get; set; }
+        public virtual StreetEntity Street { get; set; }
+        public virtual UserEntity User { get; set; }
     }
 }

@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 
-namespace VestaTV.Cabel.DAL.Entities
+namespace VestaTV.Cabel.Core.Models
 {
     public partial class Master
     {
         public Master()
         {
-            Cities = new HashSet<MasterCities>();
-            OrderOnCableTvs = new HashSet<OrderOnCableTV>();
+            Cities = new HashSet<City>();
+            OrderOnCableTvs = new HashSet<HistoryOfOrder>();
             OrderRepairAndRestructionsMasterPerformer = new HashSet<OrderRepairAndRestruction>();
             OrderRepairAndRestructionsResponsibleMaster = new HashSet<OrderRepairAndRestruction>();
         }
@@ -24,8 +24,8 @@ namespace VestaTV.Cabel.DAL.Entities
         public string SecondMobilePhone { get; set; }
         public bool Brigade { get; set; }
 
-        public virtual ICollection<MasterCities> Cities { get; set; }
-        public virtual ICollection<OrderOnCableTV> OrderOnCableTvs { get; set; }
+        public virtual ICollection<City> Cities { get; set; }
+        public virtual ICollection<HistoryOfOrder> OrderOnCableTvs { get; set; }
         public virtual ICollection<OrderRepairAndRestruction> OrderRepairAndRestructionsMasterPerformer { get; set; }
         public virtual ICollection<OrderRepairAndRestruction> OrderRepairAndRestructionsResponsibleMaster { get; set; }
     }

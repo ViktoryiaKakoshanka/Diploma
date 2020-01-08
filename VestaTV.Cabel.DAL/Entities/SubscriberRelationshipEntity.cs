@@ -2,13 +2,13 @@
 
 namespace VestaTV.Cabel.DAL.Entities
 {
-    public partial class SubscriberRelationship
+    internal partial class SubscriberRelationshipEntity
     {
         public int Id { get; set; }
         public DateTime RelationshipDate { get; set; }
         public int SubscriberId { get; set; }
-        public int RelationshipType { get; set; }
+        public RelationshipTypeEntity RelationshipType { get; set; }
 
-        public virtual Subscriber Subscriber { get; set; }
+        public virtual SubscriberEntity Subscriber { get; set; }
     }
 }

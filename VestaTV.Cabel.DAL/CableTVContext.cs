@@ -17,21 +17,21 @@ namespace VestaTV.Cabel.DAL
         {
         }
 
-        public virtual DbSet<CableTvProblem> CableTvproblems { get; set; }
-        public virtual DbSet<City> Cities { get; set; }
-        public virtual DbSet<MasterCities> MasterCities { get; set; }
-        public virtual DbSet<Master> Masters { get; set; }
-        public virtual DbSet<OrderOnCableTV> OrderOnCableTvs { get; set; }
-        public virtual DbSet<OrderRepairAndRestruction> OrderRepairAndRestructions { get; set; }
-        public virtual DbSet<Street> Streets { get; set; }
-        public virtual DbSet<SubscriberRelationship> SubscriberRelationships { get; set; }
-        public virtual DbSet<Subscriber> Subscribers { get; set; }
-        public virtual DbSet<UserHistory> UserActions { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<CableTvProblemEntity> CableTvproblems { get; set; }
+        public virtual DbSet<CityEntity> Cities { get; set; }
+        public virtual DbSet<MasterCityEntity> MasterCities { get; set; }
+        public virtual DbSet<MasterEntity> Masters { get; set; }
+        public virtual DbSet<OrderOnCableTVEntity> OrderOnCableTvs { get; set; }
+        public virtual DbSet<OrderRepairAndRestructionEntity> OrderRepairAndRestructions { get; set; }
+        public virtual DbSet<StreetEntity> Streets { get; set; }
+        public virtual DbSet<SubscriberRelationshipEntity> SubscriberRelationships { get; set; }
+        public virtual DbSet<SubscriberEntity> Subscribers { get; set; }
+        public virtual DbSet<UserHistoryEntity> UserActions { get; set; }
+        public virtual DbSet<UserEntity> Users { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<CableTvProblem>(entity =>
+            modelBuilder.Entity<CableTvProblemEntity>(entity =>
             {
                 entity.ToTable("CableTVProblems");
             });

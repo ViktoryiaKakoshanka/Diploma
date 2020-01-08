@@ -14,68 +14,68 @@ namespace VestaTV.Cabel.DAL
         private static string _connectionString;
         private CableTVContext _db;
 
-        private IGenericRepository<Master> _masters;
-        private IGenericRepository<CableTvProblem> _cableTVProblems;
-        private IGenericRepository<OrderOnCableTV> _orderOnCableTV;
-        private IGenericRepository<OrderRepairAndRestruction> _orderRepairAndRestruction;
-        private IGenericRepository<City> _cities;
-        private IGenericRepository<Street> _streets;
-        private IGenericRepository<Subscriber> _subscribers;
-        private IGenericRepository<SubscriberRelationship> _subscriberrelationships;
-        private IGenericRepository<User> _user;
-        private IGenericRepository<UserHistory> _userActionHistory;
+        private IGenericRepository<MasterEntity> _masters;
+        private IGenericRepository<CableTvProblemEntity> _cableTVProblems;
+        private IGenericRepository<OrderOnCableTVEntity> _orderOnCableTV;
+        private IGenericRepository<OrderRepairAndRestructionEntity> _orderRepairAndRestruction;
+        private IGenericRepository<CityEntity> _cities;
+        private IGenericRepository<StreetEntity> _streets;
+        private IGenericRepository<SubscriberEntity> _subscribers;
+        private IGenericRepository<SubscriberRelationshipEntity> _subscriberrelationships;
+        private IGenericRepository<UserEntity> _user;
+        private IGenericRepository<UserHistoryEntity> _userActionHistory;
 
-        public IGenericRepository<Master> Masters
+        public IGenericRepository<MasterEntity> Masters
         {
-            get => _masters ?? (_masters = new GenericRepository<Master>(_db, _db.Masters));
+            get => _masters ?? (_masters = new GenericRepository<MasterEntity>(_db, _db.Masters));
         }
 
-        public IGenericRepository<CableTvProblem> CableTVProblems
+        public IGenericRepository<CableTvProblemEntity> CableTVProblems
         {
             get => _cableTVProblems ??
-                   (_cableTVProblems = new GenericRepository<CableTvProblem>(_db, _db.CableTvproblems));
+                   (_cableTVProblems = new GenericRepository<CableTvProblemEntity>(_db, _db.CableTvproblems));
         }
 
-        public IGenericRepository<OrderOnCableTV> OrdersOnCableTV
+        public IGenericRepository<OrderOnCableTVEntity> OrdersOnCableTV
         {
             get => _orderOnCableTV ??
-                   (_orderOnCableTV = new GenericRepository<OrderOnCableTV>(_db, _db.OrderOnCableTvs));
+                   (_orderOnCableTV = new GenericRepository<OrderOnCableTVEntity>(_db, _db.OrderOnCableTvs));
         }
 
-        public IGenericRepository<OrderRepairAndRestruction> OrdersRepairAndRestruction
+        public IGenericRepository<OrderRepairAndRestructionEntity> OrdersRepairAndRestruction
         {
-            get => _orderRepairAndRestruction ?? (_orderRepairAndRestruction = new GenericRepository<OrderRepairAndRestruction>(_db, _db.OrderRepairAndRestructions));
+            get => _orderRepairAndRestruction ?? (_orderRepairAndRestruction = new GenericRepository<OrderRepairAndRestructionEntity>(_db, _db.OrderRepairAndRestructions));
         }
 
-        public IGenericRepository<City> Cities
+        public IGenericRepository<CityEntity> Cities
         {
-            get => _cities ?? (_cities = new GenericRepository<City>(_db, _db.Cities));
+            get => _cities ?? (_cities = new GenericRepository<CityEntity>(_db, _db.Cities));
         }
 
-        public IGenericRepository<Street> Streets
+        public IGenericRepository<StreetEntity> Streets
         {
-            get => _streets ?? (_streets = new GenericRepository<Street>(_db, _db.Streets));
+            get => _streets ?? (_streets = new GenericRepository<StreetEntity>(_db, _db.Streets));
         }
 
-        public IGenericRepository<Subscriber> Subscribers
+        public IGenericRepository<SubscriberEntity> Subscribers
         {
-            get => _subscribers ?? (_subscribers = new GenericRepository<Subscriber>(_db, _db.Subscribers));
+            get => _subscribers ?? (_subscribers = new GenericRepository<SubscriberEntity>(_db, _db.Subscribers));
         }
 
-        public IGenericRepository<SubscriberRelationship> SubscriberRelationships
+        public IGenericRepository<SubscriberRelationshipEntity> SubscriberRelationships
         {
             get => _subscriberrelationships ?? (_subscriberrelationships =
-                       new GenericRepository<SubscriberRelationship>(_db, _db.SubscriberRelationships));
+                       new GenericRepository<SubscriberRelationshipEntity>(_db, _db.SubscriberRelationships));
         }
 
-        public IGenericRepository<User> Users
+        public IGenericRepository<UserEntity> Users
         {
-            get => _user ?? (_user = new GenericRepository<User>(_db, _db.Users));
+            get => _user ?? (_user = new GenericRepository<UserEntity>(_db, _db.Users));
         }
 
-        public IGenericRepository<UserHistory> UserActionHistory
+        public IGenericRepository<UserHistoryEntity> UserActionHistory
         {
-            get => _userActionHistory ?? (_userActionHistory = new GenericRepository<UserHistory>(_db, _db.UserActions));
+            get => _userActionHistory ?? (_userActionHistory = new GenericRepository<UserHistoryEntity>(_db, _db.UserActions));
         }
 
         public void Save()

@@ -4,9 +4,9 @@ using VestaTV.Cabel.DAL.Entities;
 
 namespace VestaTV.Cabel.DAL.EntitiesConfigs
 {
-    class MasterCitiesConfig : IEntityTypeConfiguration<MasterCities>
+    class MasterCitiesConfig : IEntityTypeConfiguration<MasterCityEntity>
     {
-        public void Configure(EntityTypeBuilder<MasterCities> builder)
+        public void Configure(EntityTypeBuilder<MasterCityEntity> builder)
         {
             builder.HasKey(e => new { e.MasterId, e.CityId })
                     .HasName("PK_dbo.MasterCities");
