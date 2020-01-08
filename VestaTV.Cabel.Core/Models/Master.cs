@@ -7,7 +7,7 @@ namespace VestaTV.Cabel.Core.Models
         public Master()
         {
             Cities = new HashSet<City>();
-            OrderOnCableTvs = new HashSet<HistoryOfOrder>();
+            OrderOnCableTvs = new HashSet<OrderOnCableTV>();
             OrderRepairAndRestructionsMasterPerformer = new HashSet<OrderRepairAndRestruction>();
             OrderRepairAndRestructionsResponsibleMaster = new HashSet<OrderRepairAndRestruction>();
         }
@@ -25,7 +25,7 @@ namespace VestaTV.Cabel.Core.Models
         public bool Brigade { get; set; }
 
         public virtual ICollection<City> Cities { get; set; }
-        public virtual ICollection<HistoryOfOrder> OrderOnCableTvs { get; set; }
+        public virtual ICollection<OrderOnCableTV> OrderOnCableTvs { get; set; }
         public virtual ICollection<OrderRepairAndRestruction> OrderRepairAndRestructionsMasterPerformer { get; set; }
         public virtual ICollection<OrderRepairAndRestruction> OrderRepairAndRestructionsResponsibleMaster { get; set; }
     }

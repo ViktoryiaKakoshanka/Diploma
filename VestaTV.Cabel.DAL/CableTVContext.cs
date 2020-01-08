@@ -1,12 +1,10 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 using VestaTV.Cabel.DAL.Entities;
 using VestaTV.Cabel.DAL.EntitiesConfigs;
 
 namespace VestaTV.Cabel.DAL
 {
-    public partial class CableTVContext : DbContext
+    internal partial class CableTVContext : DbContext
     {
         public CableTVContext()
         {

@@ -7,8 +7,8 @@ namespace VestaTV.Cabel.Core.Models
     {
         public Subscriber()
         {
-            HistoryOfOrders = new HashSet<HistoryOfOrder>();
-            HistoryOfRelationships = new HashSet<HistoryOfRelationship>();
+            HistoryOfOrders = new HashSet<OrderOnCableTV>();
+            HistoryOfRelationships = new HashSet<HistoryOfRelationshipBySubscriber>();
         }
 
         public int Id { get; set; }
@@ -25,7 +25,7 @@ namespace VestaTV.Cabel.Core.Models
         public Address Address { get; set; }
 
         
-        public virtual ICollection<HistoryOfOrder> HistoryOfOrders { get; set; }
-        public virtual ICollection<HistoryOfRelationship> HistoryOfRelationships { get; set; }
+        public virtual ICollection<OrderOnCableTV> HistoryOfOrders { get; set; }
+        public virtual ICollection<HistoryOfRelationshipBySubscriber> HistoryOfRelationships { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace VestaTV.Cabel.Core.Models
 {
-    public partial class HistoryOfOrder
+    public partial class OrderOnCableTV
     {
         public int Id { get; set; }
         public int SubscriberId { get; set; }

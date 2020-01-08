@@ -6,7 +6,7 @@ using VestaTV.Cabel.DAL.Interfaces;
 
 namespace VestaTV.Cabel.DAL.Repositories
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
+    internal class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         private CableTVContext _context;
         private DbSet<TEntity> _dbSet;

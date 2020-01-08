@@ -2,7 +2,7 @@
 
 namespace VestaTV.Cabel.Core.Models
 {
-    public partial class HistoryOfRelationship
+    public partial class HistoryOfRelationshipBySubscriber
     {
         public int Id { get; set; }
         public DateTime RelationshipDate { get; set; }
