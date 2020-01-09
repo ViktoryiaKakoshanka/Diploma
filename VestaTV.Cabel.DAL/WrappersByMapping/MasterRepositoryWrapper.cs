@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using VestaTV.Cabel.Core.Models;
 using VestaTV.Cabel.DAL.Entities;
@@ -27,27 +26,30 @@ namespace VestaTV.Cabel.DAL.WrappersByMapping
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _mastersDB.Delete(id);
         }
 
         public Master FindById(int? id)
         {
-            throw new NotImplementedException();
+            if (id == null)
+                throw new ArgumentNullException();
+
+            return _mastersDB.FindById(id).Map();
         }
 
         public IEnumerable<Master> Get(Func<Master, bool> predicate)
         {
-            throw new NotImplementedException();
+            return _mastersDB.Get(predicate.Map()).Map();
         }
 
         public IEnumerable<Master> GetAll()
         {
-            throw new NotImplementedException();
+            return _mastersDB.GetAll().Map();
         }
 
-        public void Update(Master item)
+        public void Update(Master model)
         {
-            throw new NotImplementedException();
+            _mastersDB.Update(model.Map());
         }
     }
 }
