@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VestaTV.Cabel.DAL\VestaTV.Cabel.DAL.csproj" />
+    <ProjectReference Include="..\VestaTV.Cable.BLL\VestaTV.Cable.BLL.csproj" />
   </ItemGroup>
 
 </Project>

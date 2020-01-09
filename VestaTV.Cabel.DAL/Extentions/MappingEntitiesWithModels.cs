@@ -8,7 +8,17 @@ namespace VestaTV.Cabel.DAL.Extentions
 {
     internal static class MappingEntitiesWithModels
     {
-        private static readonly IMapper mapper = UnitOfWork.mapper;
+        private static readonly IMapper mapper;
+
+        static MappingEntitiesWithModels()
+        {
+            MapperConfiguration configuration = new MapperConfiguration(cnf =>
+            {
+                cnf.AddProfile<AutoMappingProfile>();
+            });
+            mapper = configuration.CreateMapper();
+        }
+
         public static MasterEntity Map(this Master master)
         {
             return mapper.Map<Master, MasterEntity>(master);

@@ -10,26 +10,25 @@ namespace VestaTV.Cabel.API.Controllers
     [ApiController]
     public class MasterController : ControllerBase
     {
-        private IUnitOfWork _db;
+        private readonly IDataAccess dataAccess;
 
         public MasterController()
         {
-            _db = new UnitOfWork();
+            dataAccess = new DataAccess();
         }
 
         // GET: api/Master
         [HttpGet]
         public IEnumerable<Master> Get()
         {
-            var users = _db.Masters.GetAll();            
-            return users;
+            return dataAccess.GetMasters();            
         }
 
         // GET: api/Master/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public Master Get(int id)
         {
-            return "value";
+            return dataAccess.GatMasterById(id);
         }
 
         // POST: api/Master

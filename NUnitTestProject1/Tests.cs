@@ -14,8 +14,7 @@ namespace NUnitTestProject1
         [Test]
         public void Test1()
         {
-            var db = new UnitOfWork();
-            var a = db.Users.GetAll();
+            var a = new DataAccess().GetMasters();
             Assert.AreEqual(1, a.Count());
         }
     }

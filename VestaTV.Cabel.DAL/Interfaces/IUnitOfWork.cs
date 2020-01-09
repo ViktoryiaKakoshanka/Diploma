@@ -1,24 +1,23 @@
 ﻿using System;
-using VestaTV.Cabel.Core.Models;
+using VestaTV.Cabel.DAL.Entities;
 
 namespace VestaTV.Cabel.DAL.Interfaces
 {
-    public interface IUnitOfWork : IDisposable
+    internal interface IUnitOfWork : IDisposable
     {
-        //IGenericRepository<Master> Masters { get; }
-        IMasterRepositoryWrapper Masters { get; }        
-        //IGenericRepository<CableTvProblem> CableTVProblems { get; }
-        //IGenericRepository<OrderOnCableTV> OrdersOnCableTV { get; }
-        //IGenericRepository<OrderRepairAndRestruction> OrdersRepairAndRestruction { get; }
+        IGenericRepository<MasterEntity> Masters { get; }
+        IGenericRepository<CableTvProblemEntity> CableTVProblems { get; }
+        IGenericRepository<OrderOnCableTVEntity> OrdersOnCableTV { get; }
+        IGenericRepository<OrderRepairAndRestructionEntity> OrdersRepairAndRestruction { get; }
 
-        //IGenericRepository<City> Cities { get; }
-        //IGenericRepository<Street> Streets { get; }
+        IGenericRepository<CityEntity> Cities { get; }
+        IGenericRepository<StreetEntity> Streets { get; }
 
-        //IGenericRepository<Subscriber> Subscribers { get; }
-        //IGenericRepository<HistoryOfRelationshipBySubscriber> HistoryOfRelationshipBySubscriber { get; }
+        IGenericRepository<SubscriberEntity> Subscribers { get; }
+        IGenericRepository<SubscriberRelationshipEntity> SubscriberRelationships { get; }
 
-        //IGenericRepository<User> Users { get; }
-        //IGenericRepository<ActionHistoryByUser> UserActionHistory { get; }
+        IGenericRepository<UserEntity> Users { get; }
+        IGenericRepository<UserHistoryEntity> UserActionHistory { get; }
 
         void Save();
     }
