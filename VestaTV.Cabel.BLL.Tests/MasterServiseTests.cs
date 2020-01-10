@@ -1,9 +1,10 @@
 using NUnit.Framework;
-using System.Collections.Generic;
 using System.Linq;
-using VestaTV.Cabel.Core.Models;
-using VestaTV.Cable.BLL.Interfaces;
 using VestaTV.Cable.BLL.Services;
+using Moq;
+using VestaTV.Cabel.DAL.Interfaces;
+using VestaTV.Cabel.Core.Models;
+using System.Collections.Generic;
 
 namespace VestaTV.Cabel.BLL.Tests
 {
@@ -15,14 +16,18 @@ namespace VestaTV.Cabel.BLL.Tests
         }
 
         [Test]
-        public void Test1()
+        public void BLLMasterServisGetMastersReturn2Test()
         {
-            var masterServis = new MasterServis();
+            var master = new Master() { Brigade = false, Name = "123" };
+            var expectedMasters = new List<Master>() { master, master };
 
-            masterServis.AddNewMaster(new Master() { Brigade = false, Name = "123" });
+            var mock = new Mock<IDataAccess>();
+            mock.Setup(d => d.GetMasters()).Returns(expectedMasters);
 
-            var masters = masterServis.GetMasters();
-            Assert.AreEqual(1, masters.Count());
+            var masterServis = new MasterServis(mock.Object);
+
+            var actualMasters = masterServis.GetMasters();
+            Assert.AreEqual(2, actualMasters.Count());
         }
     }
 }

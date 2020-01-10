@@ -9,16 +9,21 @@ namespace VestaTV.Cable.BLL.Services
 {
     public class MasterServis : IMasterServis
     {
-        private readonly IDataAccess dataAccess;
+        private readonly IDataAccess _dataAccess;
 
         public MasterServis()
         {
-            dataAccess = new DataAccess();
+            _dataAccess = new DataAccess();
         }
-               
+
+        public MasterServis(IDataAccess dataAccess)
+        {
+            _dataAccess = dataAccess;
+        }
+
         public void AddNewMaster(Master master)
         {
-            dataAccess.AddNewMaster(master);
+            _dataAccess.AddNewMaster(master);
         }
 
         public void FireMaster(int id)
@@ -33,7 +38,7 @@ namespace VestaTV.Cable.BLL.Services
 
         public IEnumerable<Master> GetMasters()
         {
-            return dataAccess.GetMasters();
+            return _dataAccess.GetMasters();
         }
 
         public IEnumerable<Master> GetMasters(Func<Master, bool> predicate)

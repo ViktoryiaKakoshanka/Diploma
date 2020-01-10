@@ -3,7 +3,7 @@ using VestaTV.Cable.BLL.Services;
 
 namespace VestaTV.Cable.BLL
 {
-    class Facade : IFacade
+    public class FacadeBll : IFacadeBll
     {
         private IMasterServis _masterServis;
 

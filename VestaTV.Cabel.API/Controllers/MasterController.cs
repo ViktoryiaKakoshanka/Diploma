@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using VestaTV.Cabel.Core.Models;
-using VestaTV.Cabel.DAL;
-using VestaTV.Cabel.DAL.Interfaces;
+using VestaTV.Cable.BLL;
+using VestaTV.Cable.BLL.Interfaces;
 
 namespace VestaTV.Cabel.API.Controllers
 {
@@ -10,25 +10,25 @@ namespace VestaTV.Cabel.API.Controllers
     [ApiController]
     public class MasterController : ControllerBase
     {
-        private readonly IDataAccess dataAccess;
+        private readonly IMasterServis _masterService;
 
         public MasterController()
         {
-            dataAccess = new DataAccess();
+            _masterService = new FacadeBll().MasterServis;
         }
 
         // GET: api/Master
         [HttpGet]
         public IEnumerable<Master> Get()
         {
-            return dataAccess.GetMasters();            
+            return _masterService.GetMasters();            
         }
 
         // GET: api/Master/5
         [HttpGet("{id}", Name = "Get")]
         public Master Get(int id)
         {
-            return dataAccess.GatMasterById(id);
+            return _masterService.GetMaster(id);
         }
 
         // POST: api/Master

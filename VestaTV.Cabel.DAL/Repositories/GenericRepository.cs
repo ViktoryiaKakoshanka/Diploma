@@ -19,11 +19,17 @@ namespace VestaTV.Cabel.DAL.Repositories
 
         public void Create(TEntity item)
         {
+            if (item == null)
+                throw new ArgumentNullException();
+
             _dbSet.Add(item);
         }
 
         public void Delete(int id)
         {
+            if (id > 0)
+                throw new ArgumentOutOfRangeException();
+
             var entity = FindById(id);
             if (entity != null)
             {
@@ -31,8 +37,11 @@ namespace VestaTV.Cabel.DAL.Repositories
             }
         }
 
-        public TEntity FindById(int? id)
+        public TEntity FindById(int id)
         {
+            if (id > 0)
+                throw new ArgumentOutOfRangeException();
+
             return _dbSet.Find(id);
         }
 
@@ -43,11 +52,17 @@ namespace VestaTV.Cabel.DAL.Repositories
 
         public IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
         {
+            if (predicate == null)
+                throw new ArgumentNullException();
+
             return _dbSet.Where(predicate).ToList();
         }
 
         public void Update(TEntity item)
         {
+            if (item == null)
+                throw new ArgumentNullException();
+
             _context.Entry(item).State = EntityState.Modified;
         }
     }

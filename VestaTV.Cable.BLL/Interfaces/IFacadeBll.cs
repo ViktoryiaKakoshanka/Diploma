@@ -1,6 +1,6 @@
 ﻿namespace VestaTV.Cable.BLL.Interfaces
 {
-    interface IFacade
+    public interface IFacadeBll
     {
         IMasterServis MasterServis { get; }
 
