@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using VestaTV.Cabel.Core.Models;
 using VestaTV.Cable.BLL;
@@ -8,6 +9,7 @@ namespace VestaTV.Cabel.API.Controllers
 {
     [Route("[controller]")]
     [ApiController]
+    [EnableCors]
     public class MasterController : ControllerBase
     {
         private readonly IMasterServis _masterService;
