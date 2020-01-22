@@ -35,7 +35,7 @@ namespace VestaTV.Cabel.API.Controllers
 
         // POST: api/Master
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(Master master)
         {
         }
 
