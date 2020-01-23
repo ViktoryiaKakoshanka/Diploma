@@ -28,12 +28,12 @@ namespace VestaTV.Cable.BLL.Services
 
         public void FireMaster(int id)
         {
-            throw new NotImplementedException();
+            _dataAccess.FireMaster(id);
         }
 
         public Master GetMaster(int id)
         {
-            throw new NotImplementedException();
+            return _dataAccess.GatMasterById(id);
         }
 
         public IEnumerable<Master> GetMasters()
@@ -43,12 +43,12 @@ namespace VestaTV.Cable.BLL.Services
 
         public IEnumerable<Master> GetMasters(Func<Master, bool> predicate)
         {
-            throw new NotImplementedException();
+            return _dataAccess.GetMasters(predicate);
         }
-
-        public void UpdateMaster()
+        
+        public void UpdateMaster(Master master)
         {
-            throw new NotImplementedException();
+            _dataAccess.UpdateMaster(master);
         }
     }
 }

@@ -24,6 +24,7 @@ namespace VestaTV.Cabel.DAL
         public void FireMaster(int id)
         {
             _unitOfWork.Masters.Delete(id);
+            _unitOfWork.Save();
         }
 
         public Master GatMasterById(int id)
@@ -44,6 +45,7 @@ namespace VestaTV.Cabel.DAL
         public void UpdateMaster(Master master)
         {
             _unitOfWork.Masters.Update(master.Map());
+            _unitOfWork.Save();
         }
     }
 }

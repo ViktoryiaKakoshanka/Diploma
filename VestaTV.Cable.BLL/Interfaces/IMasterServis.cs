@@ -10,7 +10,7 @@ namespace VestaTV.Cable.BLL.Interfaces
         Master GetMaster(int id);
         IEnumerable<Master> GetMasters();
         IEnumerable<Master> GetMasters(Func<Master, bool> predicate);
-        void UpdateMaster();
+        void UpdateMaster(Master master);
         void FireMaster(int id);
     }
 }
