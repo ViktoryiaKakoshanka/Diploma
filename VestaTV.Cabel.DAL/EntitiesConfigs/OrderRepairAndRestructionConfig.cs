@@ -4,9 +4,9 @@ using VestaTV.Cabel.DAL.Entities;
 
 namespace VestaTV.Cabel.DAL.EntitiesConfigs
 {
-    class OrderRepairAndRestructionConfig : IEntityTypeConfiguration<OrderRepairAndRestruction>
+    class OrderRepairAndRestructionConfig : IEntityTypeConfiguration<OrderRepairAndRestructionEntity>
     {
-        public void Configure(EntityTypeBuilder<OrderRepairAndRestruction> builder)
+        public void Configure(EntityTypeBuilder<OrderRepairAndRestructionEntity> builder)
         {
             builder.HasIndex(e => e.CityId)
                     .HasName("IX_CityId");

@@ -5,9 +5,9 @@ using VestaTV.Cabel.DAL.Entities;
 
 namespace VestaTV.Cabel.DAL.EntitiesConfigs
 {
-    class SubscriberRelationshipConfig : IEntityTypeConfiguration<SubscriberRelationship>
+    class SubscriberRelationshipConfig : IEntityTypeConfiguration<SubscriberRelationshipEntity>
     {
-        public void Configure(EntityTypeBuilder<SubscriberRelationship> builder)
+        public void Configure(EntityTypeBuilder<SubscriberRelationshipEntity> builder)
         {
             builder.HasIndex(e => e.SubscriberId)
                     .HasName("IX_SubscriberId");

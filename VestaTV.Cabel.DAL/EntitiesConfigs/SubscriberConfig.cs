@@ -4,9 +4,9 @@ using VestaTV.Cabel.DAL.Entities;
 
 namespace VestaTV.Cabel.DAL.EntitiesConfigs
 {
-    class SubscriberConfig : IEntityTypeConfiguration<Subscriber>
+    class SubscriberConfig : IEntityTypeConfiguration<SubscriberEntity>
     {
-        public void Configure(EntityTypeBuilder<Subscriber> builder)
+        public void Configure(EntityTypeBuilder<SubscriberEntity> builder)
         {
             builder.HasIndex(e => e.CityId)
                     .HasName("IX_CityId");

@@ -2,7 +2,7 @@
 
 namespace VestaTV.Cabel.DAL.Entities
 {
-    public partial class OrderOnCableTV
+    internal partial class OrderOnCableTVEntity
     {
         public int Id { get; set; }
         public int SubscriberId { get; set; }
@@ -19,8 +19,8 @@ namespace VestaTV.Cabel.DAL.Entities
         public DateTime CreationDate { get; set; }
         public DateTime EstimatedCompletionDate { get; set; }
 
-        public virtual CableTvProblem CableTvproblem { get; set; }
-        public virtual Master Master { get; set; }
-        public virtual Subscriber Subscriber { get; set; }
+        public virtual CableTvProblemEntity CableTvproblem { get; set; }
+        public virtual MasterEntity Master { get; set; }
+        public virtual SubscriberEntity Subscriber { get; set; }
     }
 }

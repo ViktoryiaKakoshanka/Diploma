@@ -6,7 +6,7 @@ using VestaTV.Cabel.DAL.Interfaces;
 
 namespace VestaTV.Cabel.DAL.Repositories
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
+    internal class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         private CableTVContext _context;
         private DbSet<TEntity> _dbSet;
@@ -19,11 +19,17 @@ namespace VestaTV.Cabel.DAL.Repositories
 
         public void Create(TEntity item)
         {
+            if (item == null)
+                throw new ArgumentNullException();
+
             _dbSet.Add(item);
         }
 
         public void Delete(int id)
         {
+            if (id < 0)
+                throw new ArgumentOutOfRangeException();
+
             var entity = FindById(id);
             if (entity != null)
             {
@@ -31,23 +37,32 @@ namespace VestaTV.Cabel.DAL.Repositories
             }
         }
 
-        public TEntity FindById(int? id)
+        public TEntity FindById(int id)
         {
+            if (id < 0)
+                throw new ArgumentOutOfRangeException();
+
             return _dbSet.Find(id);
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            return _dbSet.AsNoTracking().ToList();
+            return _dbSet.ToList();
         }
 
         public IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
         {
-            return _dbSet.AsNoTracking().Where(predicate).ToList();
+            if (predicate == null)
+                throw new ArgumentNullException();
+
+            return _dbSet.Where(predicate).ToList();
         }
 
         public void Update(TEntity item)
         {
+            if (item == null)
+                throw new ArgumentNullException();
+
             _context.Entry(item).State = EntityState.Modified;
         }
     }

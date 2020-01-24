@@ -4,9 +4,9 @@ using VestaTV.Cabel.DAL.Entities;
 
 namespace VestaTV.Cabel.DAL.EntitiesConfigs
 {
-    internal class OrderOnCableTVConfig : IEntityTypeConfiguration<OrderOnCableTV>
+    internal class OrderOnCableTVConfig : IEntityTypeConfiguration<OrderOnCableTVEntity>
     {
-        public void Configure(EntityTypeBuilder<OrderOnCableTV> builder)
+        public void Configure(EntityTypeBuilder<OrderOnCableTVEntity> builder)
         {
             builder.ToTable("OrderOnCableTVs");
 

@@ -4,9 +4,9 @@ using VestaTV.Cabel.DAL.Entities;
 
 namespace VestaTV.Cabel.DAL.EntitiesConfigs
 {
-    class UserHistoryConfig : IEntityTypeConfiguration<UserHistory>
+    class UserHistoryConfig : IEntityTypeConfiguration<UserHistoryEntity>
     {
-        public void Configure(EntityTypeBuilder<UserHistory> builder)
+        public void Configure(EntityTypeBuilder<UserHistoryEntity> builder)
         {
             builder.ToTable("UserAction");
 

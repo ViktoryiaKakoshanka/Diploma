@@ -4,9 +4,9 @@ using VestaTV.Cabel.DAL.Entities;
 
 namespace VestaTV.Cabel.DAL.EntitiesConfigs
 {
-    class StreetConfig : IEntityTypeConfiguration<Street>
+    class StreetConfig : IEntityTypeConfiguration<StreetEntity>
     {
-        public void Configure(EntityTypeBuilder<Street> builder)
+        public void Configure(EntityTypeBuilder<StreetEntity> builder)
         {
             builder.HasIndex(e => e.CityId)
                     .HasName("IX_City_Id");

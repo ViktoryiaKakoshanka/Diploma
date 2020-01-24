@@ -12,7 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.travis.yml = .travis.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VestaTV.Cabel.DAL.Test", "VestaTV.Cabel.DAL.Test\VestaTV.Cabel.DAL.Test.csproj", "{AE2D413D-122D-43A2-8191-1B04AC2E9969}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VestaTV.Cabel.Core", "VestaTV.Cabel.Core\VestaTV.Cabel.Core.csproj", "{FE233081-0914-4683-ACC3-DEA20AFE9C06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VestaTV.Cable.BLL", "VestaTV.Cable.BLL\VestaTV.Cable.BLL.csproj", "{CF7D1EBA-6499-4017-A1E9-9FF71D2CE94D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VestaTV.Cabel.BLL.Tests", "VestaTV.Cabel.BLL.Tests\VestaTV.Cabel.BLL.Tests.csproj", "{09BE8E12-394A-4E7B-8E30-F7EC3C5323C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,10 +32,18 @@ Global
 		{8848CD6E-49A0-4C00-A50C-DB96782A7278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8848CD6E-49A0-4C00-A50C-DB96782A7278}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8848CD6E-49A0-4C00-A50C-DB96782A7278}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE2D413D-122D-43A2-8191-1B04AC2E9969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE2D413D-122D-43A2-8191-1B04AC2E9969}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE2D413D-122D-43A2-8191-1B04AC2E9969}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE2D413D-122D-43A2-8191-1B04AC2E9969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE233081-0914-4683-ACC3-DEA20AFE9C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE233081-0914-4683-ACC3-DEA20AFE9C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE233081-0914-4683-ACC3-DEA20AFE9C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE233081-0914-4683-ACC3-DEA20AFE9C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7D1EBA-6499-4017-A1E9-9FF71D2CE94D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7D1EBA-6499-4017-A1E9-9FF71D2CE94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7D1EBA-6499-4017-A1E9-9FF71D2CE94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7D1EBA-6499-4017-A1E9-9FF71D2CE94D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09BE8E12-394A-4E7B-8E30-F7EC3C5323C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09BE8E12-394A-4E7B-8E30-F7EC3C5323C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09BE8E12-394A-4E7B-8E30-F7EC3C5323C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09BE8E12-394A-4E7B-8E30-F7EC3C5323C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
