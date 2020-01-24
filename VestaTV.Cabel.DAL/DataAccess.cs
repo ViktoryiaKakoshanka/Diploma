@@ -10,7 +10,13 @@ namespace VestaTV.Cabel.DAL
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public DataAccess()
+        public static IDataAccess Instance { get
+            {
+                return new DataAccess();
+            }
+        }
+
+        private DataAccess()
         {
             _unitOfWork = new UnitOfWork();
         }
@@ -18,6 +24,18 @@ namespace VestaTV.Cabel.DAL
         public void AddNewMaster(Master master)
         {
             _unitOfWork.Masters.Create(master.Map());
+            _unitOfWork.Save();
+        }
+
+        public void AddNewUser(User user)
+        {
+            _unitOfWork.Users.Create(user.Map());
+            _unitOfWork.Save();
+        }
+
+        public void DeleteUser(int id)
+        {
+            _unitOfWork.Users.Delete(id);
             _unitOfWork.Save();
         }
 
@@ -32,6 +50,11 @@ namespace VestaTV.Cabel.DAL
             return _unitOfWork.Masters.FindById(id).Map();
         }
 
+        public User GatUserById(int id)
+        {
+            return _unitOfWork.Users.FindById(id).Map();
+        }
+
         public IEnumerable<Master> GetMasters()
         {
             return _unitOfWork.Masters.GetAll().Map();
@@ -42,9 +65,25 @@ namespace VestaTV.Cabel.DAL
             return _unitOfWork.Masters.Get(predicate.Map()).Map();
         }
 
+        public IEnumerable<User> GetUsers()
+        {
+            return _unitOfWork.Users.GetAll().Map();
+        }
+
+        public IEnumerable<User> GetUsers(Func<User, bool> predicate)
+        {
+            return _unitOfWork.Users.Get(predicate.Map()).Map();
+        }
+
         public void UpdateMaster(Master master)
         {
             _unitOfWork.Masters.Update(master.Map());
+            _unitOfWork.Save();
+        }
+
+        public void UpdateUser(User user)
+        {
+            _unitOfWork.Users.Update(user.Map());
             _unitOfWork.Save();
         }
     }

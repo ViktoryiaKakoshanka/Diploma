@@ -13,7 +13,7 @@ namespace VestaTV.Cable.BLL.Services
 
         public MasterServis()
         {
-            _dataAccess = new DataAccess();
+            _dataAccess = DataAccess.Instance;
         }
 
         public MasterServis(IDataAccess dataAccess)

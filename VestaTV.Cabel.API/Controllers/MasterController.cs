@@ -28,7 +28,7 @@ namespace VestaTV.Cabel.API.Controllers
         }
 
         // GET: api/Master/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public Master Get(int id)
         {
             if (id == 0)
@@ -61,13 +61,13 @@ namespace VestaTV.Cabel.API.Controllers
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete]
+        public void Delete(Master master)
         {
-            if (id == 0)
+            if (master.Id == 0)
                 throw new KeyNotFoundException();
 
-            _masterService.FireMaster(id);
+            _masterService.FireMaster(master.Id);
         }
     }
 }

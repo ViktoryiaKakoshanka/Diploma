@@ -27,7 +27,7 @@ namespace VestaTV.Cabel.DAL.Repositories
 
         public void Delete(int id)
         {
-            if (id > 0)
+            if (id < 0)
                 throw new ArgumentOutOfRangeException();
 
             var entity = FindById(id);
@@ -39,7 +39,7 @@ namespace VestaTV.Cabel.DAL.Repositories
 
         public TEntity FindById(int id)
         {
-            if (id > 0)
+            if (id < 0)
                 throw new ArgumentOutOfRangeException();
 
             return _dbSet.Find(id);

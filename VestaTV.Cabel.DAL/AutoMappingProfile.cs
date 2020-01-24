@@ -9,6 +9,7 @@ namespace VestaTV.Cabel.DAL
         public AutoMappingProfile()
         {
             CreateMap<Master, MasterEntity>().ReverseMap();
+            CreateMap<User, UserEntity>().ReverseMap();
         }
     }
 }
